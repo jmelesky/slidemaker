@@ -1,0 +1,86 @@
+# An example slide show
+
+
+<div class="credit">copyright John Melesky, 2012</div>
+---
+# It's just markdown
+
+You write markdown, and separate it with '---'s.
+
+---
+# It's just markdown
+
+You write markdown, and separate it with '---'s.
+
+Then you stick it in a file called 'slides.txt', and run `make_slides.py`.
+---
+# It's just markdown
+
+You write markdown, and separate it with '---'s.
+
+Then you stick it in a file called 'slides.txt', and run `make_slides.py`.
+
+(this is an example of how you do the low-rent version of incremental slides)
+---
+# Magic!
+
+A file called 'index.html' is produced.
+
+(assuming you have the markdown2 python library installed. please do
+that, btw)
+
+---
+# Magic, cont'd
+
+Of course, it relies on jquery (not included) being available in the
+scripts/ directory. This was tested with jquery 1.2.3. Other versions
+probably work, maybe (i have obviously not kept up with jquery
+development and any interface changes they've made).
+
+---
+# Magic, once more
+
+Oh, hey, it's markdown, so i can [link to the jquery
+project](http://jquery.com/).
+
+---
+# How to use
+
+`Space` or mouse click is forward-slide.
+
+Same with `right-arrow`. `Left-arrow` backs up.
+
+`Up-arrow` and `down-arrow` go to the first and last slides,
+respectively.
+
+`Esc` pulls out of the slideshow mode, and shows all the slides. Click
+on one to go back into slideshow mode (this is handy if you lose your
+place and want to search for a keyword).
+
+---
+# How it works
+
+`make_slides.py` parses this file, converting each bit to html
+snippets using markdown. Each snippet becomes an html `div`, with the
+'slide' class, in the final html. The slideshow.js javascript takes
+all the 'slide' `div`s and hides them, stacks them in order, and
+manages input and transition (with some help from jquery).
+
+---
+# Patches welcome
+
+Go ahead and submit a pull request. I'm flexible.
+
+---
+# License
+
+BSD-style. Feel free to tear apart the component pieces to your own
+ends.
+
+Just, you know, try not to be a jerk about it.
+
+---
+# That's it!
+
+End of the documentation, and end of the example slides.
+
